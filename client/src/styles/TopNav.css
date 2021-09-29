@@ -1,0 +1,23 @@
+.top_nav{
+	height: 70px;
+	width: 100%;
+	background-color: #004939;
+}
+
+.login_btn{
+	float: right;
+	margin-top: 10px !important;
+}
+
+.btn_grid{
+	padding-right: 20px;
+}
+
+.jadzia{
+	background-color: red;
+	height: 100px;
+	color: wheat;
+	text-transform: uppercase;
+	text-align: center;
+	text-shadow: 1px 2px 2px black;
+}
