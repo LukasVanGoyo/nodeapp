@@ -6,14 +6,17 @@ var app = express();
 var multer = require('multer')
 const { v4: uuidv4 } = require('uuid');
 
+var users = require('./routes/users');
 var products = require('./routes/products.js');
+var recipes = require('./routes/recipes.js');
+var questions = require('./routes/questions.js');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors({
 	origin: true,
 	methods: ['GET', 'POST'],
-	
+
 }))
 
 // Have Node serve the files for our built React app
@@ -58,6 +61,10 @@ app.post('/api/add/photo', upload.single('image'), (req, res, next) => {
 
 
 app.use("/api", products);
+app.use("/api", recipes);
+app.use("/api", questions);
+
+
 
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));

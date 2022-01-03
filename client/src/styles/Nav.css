@@ -1,0 +1,77 @@
+@keyframes animateBorder {
+	from{
+		width: 0%;
+	}
+	to{
+		width: 50%;
+	}
+}
+
+
+
+.nav-container{
+	width: 100%;
+	margin-bottom: 40px;
+
+}
+.nav{
+	padding: 0;
+	margin: 0 auto;
+	align-items: center;
+	display: flex;
+	justify-content: space-around;
+	width: 60%;
+	border-bottom: solid 1px grey;
+}
+.nav-item{
+	width: auto;
+	text-align: center;
+
+}
+.nav-link{
+	color: #3c513f;
+	font-size: 22px;
+	font-weight: 500;
+	font-family: 'Yeon Sung', cursive;
+	font-weight: bold;
+	position: relative;
+	text-transform: uppercase;
+	text-shadow: 	1px 1px 2px grey,
+					1px 1px 7px white,
+					1px 1px 2px red
+	;
+
+
+}
+.nav-item:hover >  .nav-link::before{
+	width: 50%;
+}
+.nav-item:hover >  .nav-link::after {
+	width: 50%;
+
+}
+.nav-link:hover{
+	color: black;
+}
+.nav-link::before{
+	content: '';
+	border-bottom: green solid 3px;
+	position: absolute;
+	bottom: 0px;
+	right: 50%;
+	width: 0%;
+	transition: .5s ease-in-out;
+}
+
+.nav-link::after{
+	content: '';
+	border-bottom: green solid 3px;
+	position: absolute;
+	bottom: 0px;
+	left:50%;
+	width: 0%;
+	transition: .5s ease-in-out;
+}
+
+
+

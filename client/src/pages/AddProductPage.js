@@ -4,8 +4,9 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import axios from 'axios';
 
+
 const AddProductPage = () => {
-	
+
 
 	const [data, setData]  = useState([]);
 	const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -15,7 +16,7 @@ const AddProductPage = () => {
 			console.log(response.data)
 			setData(response.data)
 		})
-  		
+
   		reset();
   	};
 
@@ -23,7 +24,7 @@ const AddProductPage = () => {
 		<>
 <h2>Dodaj nowy produkt</h2>
 { data.name }
-<Form onSubmit={handleSubmit(onSubmit)}>
+<Form onSubmit={handleSubmit(onSubmit)} className="add_product_form">
   <Form.Group>
     <Form.Label>Nazwa produktu</Form.Label>
     <Form.Control type="text"  {...register("name", { required: true})} />
@@ -48,19 +49,16 @@ const AddProductPage = () => {
 
 <Form.Group>
     <Form.Label>Cena</Form.Label>
-    <Form.Control type="number" step="any"   {...register("prize")} />     
+    <Form.Control type="number" step="any"   {...register("prize")} />
   </Form.Group>
 
-   <Form.Group>
-    <Form.File label="Example file input"  type="file" {...register("image")}/>
-  </Form.Group>
 
 
 <Button variant="primary" type="submit">
-    Submit
+    Dodaj przepis
   </Button>
   </Form>
-		
+
 		</>
 		)
 }

@@ -8,6 +8,7 @@ router.get('/products', (req, res) => {
 	res.send("Wszystkie produkty")
 });
 
+
 router.post('/products/add', (req, res) => {
 	console.log(req.body)
 	console.log(req.body.name)
@@ -19,7 +20,7 @@ router.post('/products/add', (req, res) => {
 	 	description: req.description,
 	 	category: req.category,
 	 	image: req.image,
-	 	prize: req.prize, 
+	 	prize: req.prize,
 		rates: req.rates,
 		quantity: req.quantity,
 		isAvaible: req.isAvaible
