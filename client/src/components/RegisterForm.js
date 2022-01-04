@@ -32,6 +32,7 @@ const RegisterForm = () => {
 
 	return(
 		<div className="register-form-wrapper">
+		<h3>Rejestracja</h3>
 		<form className="register-form">
 
 

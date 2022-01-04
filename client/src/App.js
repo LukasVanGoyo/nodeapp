@@ -9,6 +9,7 @@ import Blog from './pages/Blog.js'
 import Shop from './pages/Shop.js'
 import Recipes from './pages/Recipes.js'
 import RegisterForm from './components/RegisterForm.js';
+import LoginForm from './components/LoginForm.js';
 import Slider from './components/Slider.js'
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
@@ -20,7 +21,8 @@ function App() {
         <TopNav />
         <Brand />
         <Nav />
-        <Slider />
+       <RegisterForm />
+       <LoginForm />
       <Switch>
               <Route exact path='/' component={HomePage} />
               <Route path='/sklep' component={Shop} />

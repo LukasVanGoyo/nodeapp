@@ -63,8 +63,7 @@ app.post('/api/add/photo', upload.single('image'), (req, res, next) => {
 app.use("/api", products);
 app.use("/api", recipes);
 app.use("/api", questions);
-
-
+app.use("/api", users);
 
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
